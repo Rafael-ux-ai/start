@@ -69,21 +69,6 @@ nav button:hover,
   transform: translateY(-2px);
 }
 
-/* Estilo do contêiner do card */
-.card-container {
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  height: calc(100vh - 100px); /* Altura total da viewport menos a altura do cabeçalho */
-}
-
-.card {
-  border: 2px solid red; /* Borda vermelha */
-  padding: 10px; /* Espaçamento interno */
-  border-radius: 30px; /* Cantos arredondados (opcional) */
-  text-align: center; /* Centraliza o texto dentro da card */
-  background-color: rgba(104, 101, 101, 0.815);
-}
 
 /* O restante do seu CSS permanece o mesmo... */
 
@@ -149,51 +134,6 @@ section {
   margin-bottom: 40px;
 }
 
-.card h5 {
-  color: black;
-  font-size: 40px;
-  font-weight: 600;
-  margin-bottom: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.card p {
-  font-size: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.card .valor {
-  color: red;
-  font-size: 50px;
-  font-family: fantasy;
-}
-
-.card .cta {
-  background-color: #da291c;
-  border-radius: 8px;
-  color: #fff;
-  display: block;
-  font-family: Roboto, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  height: 56px;
-  line-height: 56px;
-  margin: 20px auto 0; /* Margem automática para centralizar o botão */
-  text-align: center;
-  text-decoration: none;
-  width: 85%;
-}
-
-.card .dsc {
-  color: #ffffff;
-  display: block;
-  font-size: 17px;
-  list-style: none;
-  margin: 20px auto 0; /* Margem automática para centralizar a descrição */
-  text-align: left; /* Mantém o texto à esquerda */
-  width: 100%;
-  font-family: sans-serif;
-}
 #treinos-buttons {
   display: none; /* Esconde os botões de treino inicialmente */
 }
@@ -204,3 +144,133 @@ section {
 .conteudo h2 {
   font-size: 30px;
 }
+
+
+.start {
+  position: fixed; /* Faz com que o elemento fique fixo na tela */
+  bottom: 0; /* Alinha ao fundo da tela */
+  right: 0; /* Alinha à direita da tela */
+  margin: 10px; /* Adiciona uma pequena margem para não ficar colado às bordas */
+}
+
+.nav-bottom-right ul {
+  padding: 0; /* Remove o preenchimento padrão da lista */
+  margin: 0; /* Remove a margem padrão da lista */
+  list-style: none; /* Remove os marcadores dos itens da lista */
+}
+
+.nav-bottom-right li {
+  display: inline; /* Exibe os itens da lista na mesma linha */
+}
+
+.nav-bottom-right img.small-image {
+  width: 50px; /* Ajusta o tamanho da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  border: 2px solid white; /* Adiciona uma borda branca ao redor da imagem */
+  border-radius: 4px; /* Adiciona bordas arredondadas à borda (opcional) */
+}
+
+
+.plan-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.plan-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.plan-box:hover {
+  transform: scale(1.05);
+}
+
+.plan-box h2 {
+  margin: 0;
+  color: #333;
+}
+
+.price {
+  font-size: 24px;
+  color: #007bff;
+  margin: 10px 0;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.features li {
+  margin: 10px 0;
+}
+
+.btn-signup {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-signup:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para o contêiner do alerta */
+#alert-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Garantir que o alerta fique acima de outros conteúdos */
+}
+
+/* Estilo para o aviso */
+.alert {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+  position: relative;
+}
+
+/* Mostrar o aviso com animação */
+.alert.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Botão de fechar */
+.alert .btn-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+

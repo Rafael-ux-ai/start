@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="estilo.css">
     <link rel="shortcut icon" href="videos/start.jpg" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -15,27 +16,22 @@
                 <ul>
                     <li><button onclick="mostrarConteudo('home')">Início</button></li>
                     <li><button id="treinos-btn" onclick="mostrarConteudo('treinos')">Treinos</button></li>
+                    <a href="Planos.html"><li><button>Planos</button></li></a>
                 </ul>
             </nav>            
         </div>
     </header>
+    <div class="start">
+        <nav class="nav-bottom-right">
+            <ul>
+                <li><a id="show-alert" href="#"><img class="small-image" src="https://cdn-icons-png.flaticon.com/128/152/152740.png" alt="Descrição da Imagem"></a></li>
+            </ul>
+        </nav>
+    </div>
 
+    <!-- Contêiner para o alerta -->
+    <div id="alert-container"></div>
     <div class="botao">
-        <div class="card-container"> <!-- Contêiner do card -->
-            <div class="card">
-                <h5>Plano plus</h5>
-                <p>A partir de</p>
-                <div class="valor">R$100,00</div>
-                <a href="/unidades" class="cta">Matricule-se!</a>
-                <div class="dsc">
-                    <ul>
-                        <li>Personal trainer gratis</li>
-                        <li>Equipamentos de qualidade</li>
-                        <li>Preços otimos</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
         <div id="treinos-buttons" class="conteudo" style="display: none;">
             <button onclick="mostrarConteudo('Biceps')">Bíceps</button>
